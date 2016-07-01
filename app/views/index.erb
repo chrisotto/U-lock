@@ -1,8 +1,12 @@
 <div>
-  <h1>Home page</h1>
+  <h1>Stolen Bikes!</h1>
   <% if session[:user_id] %>
-    <a href="/users/<%=session[:user_id]%>">Profile page</a><br>
     <a href="/sessions/delete">Log out</a><br>
+    <p>See where bikes were stolen near
+      <input id="address" type="textbox" value="San Francisco, CA">
+      <input type="submit" value="Go" onclick="drawMap()">
+    </p>
+    <div id="map"></div>
   <% else %>
     <a href="/users/new">Sign up</a><br>
     <a href="/sessions/new">Log in</a>
