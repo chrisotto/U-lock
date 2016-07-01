@@ -1,3 +1,9 @@
+body {
+  margin: 20px;
+  font-family: Helvetica;
+  background-color: Lavender;
+}
+
 form.inline {
   display: inline;
 }
