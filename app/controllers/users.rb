@@ -4,7 +4,7 @@ get '/users/new' do
 end
 
 post '/users' do
-	@user = User.new(username: params[:username], email: params[:email], password: params[:password])
+	@user = User.new(username: params[:username], email: params[:email], city: params[:city], state: params[:state], zip: params[:zip], password: params[:password])
 	if @user.save
 		redirect '/sessions/new'
 	else
