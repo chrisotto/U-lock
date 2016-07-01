@@ -1,10 +1,6 @@
 $(document).ready(function() {
 });
 
-function drawMap() {
-
-}
-
 // https://developers.google.com/maps/documentation/javascript/geocoding#GeocodingStatusCodes
 
 var geocoder;
@@ -19,7 +15,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
 
-function codeAddress() {
+function redrawMap() {
   var address = document.getElementById("address").value;
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
